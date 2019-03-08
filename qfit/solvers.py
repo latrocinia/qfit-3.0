@@ -40,6 +40,8 @@ try:
 except ImportError:
     CPLEX = False
 
+if not (OSQP or CPLEX):
+    raise ImportError("Could not find either osqp and miosqp, or cvxopt and cplex.")
 
 
 if OSQP:

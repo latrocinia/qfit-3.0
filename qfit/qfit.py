@@ -36,7 +36,10 @@ import pkg_resources  # part of setuptools
 from .backbone import NullSpaceOptimizer, move_direction_adp
 from .clash import ClashDetector
 from .samplers import ChiRotator, CBAngleRotator
-from .solvers import QPSolver, MIQPSolver, QPSolver2, MIQPSolver2
+try:
+    from .solvers import QPSolver, MIQPSolver
+except ImportError:
+    from .solvers import QPSolver2, MIQPSolver2
 from .structure import Structure
 from .transformer import Transformer
 from .validator import Validator
