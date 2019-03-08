@@ -23,7 +23,7 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 IN THE SOFTWARE.
 '''
 
-"""Automatically build a multiconformer residue"""
+DESCRIPTION = """Automatically build a multiconformer residue"""
 
 import argparse
 import logging
@@ -42,7 +42,7 @@ from .structure import residue_type
 
 
 def parse_args():
-    p = argparse.ArgumentParser(description=__doc__)
+    p = argparse.ArgumentParser(description=DESCRIPTION)
     p.add_argument("map", type=str,
             help="Density map in CCP4 or MRC format, or an MTZ file "
                  "containing reflections and phases. For MTZ files "
